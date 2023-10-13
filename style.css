@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    background-color: #14213D;
+
+}
+/*.header{
+    background-color: #14213D;
+    color: #fff;
+    position: fixed;
+    padding: 20px 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a{
+    color: #fff;
+    justify-content: space-between;
+    display: ;
+    margin-left: 10px;
+    ;
+}
+.logo{
+    letter-spacing: px;
+    font-size: 40px;
+    font-weight: 40px;
+    font-family: fantasy;
+}
+#login{
+    width: 5em;
+    height: 2rem;
+    box-sizing: 4em;
+    font-size: large;
+    color: #14213D;
+    font-weight: bold;
+}*/
+.wrapper{
+    margin: 15px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 265px);
+    justify-content: center;
+
+
+}
+.wrapper li{
+    height: 250px;
+    list-style: none;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+}
+.wrapper .note{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.add-box, .icon, .bottom-content,
+.settings .menu li, .popup, header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.add-box{
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.add-box .icon{
+    border: 2px dashed #14213D;
+    height: 78px;
+    width: 78px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #88ABFF;
+    justify-content: center;
+}
+.add-box p{
+    color: #88ABFF;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.wrapper .note{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note p{
+    font-size: 22px;
+    font-weight: 500;
+}
+.note span{
+    display: block;
+    margin-top: 5px;
+    color: #575757;
+    font-size: 16px;
+}
+
+.note .bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+
+}
+.note.details{
+    max-height: 165px;
+    overflow-y: auto;
+
+}
+.bottom-content span{
+    color: #6d6d6d;
+    font-size: 14px ;
+}
+.bottom-content .settings i{
+    color: #6d6d6d;
+    font-size: 15px;
+    cursor: pointer;
+}
+.settings .menu li{
+    height: 25px;
+    border-radius: 0;
+    justify-content: flex-start;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 17px 15px;
+}
+.settings .menu{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    border-radius: 4px;
+    padding: 5px 0;
+    background: #fff;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    transform-origin: bottom-right;
+}
+.settings:hover .menu{
+    transform: scale(1);
+}
+.settings{
+    position: relative;
+
+}
+.menu .list{
+    padding-right: 8px;
+}
+.menu-list:hover{
+    background: #f5f5f5;
+}
+.popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.popup-box .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+}
+.popup-box, .popup-box .popup{
+    opacity: 0;
+    pointer-events: none;
+   /* transition: all 0.25s ease;*/
+
+}
+/*.popup-box.show,  .popup-box.show  .popup{
+    opacity: 1;
+    pointer-events: auto;*/
+
+.popup .content{
+    background: #fff;
+    border-radius: 5px;
+    width: calc(100% - 15px);
+}
+.popup .content header{
+    border-bottom: 1px solid #ccc;
+    padding: 15px 25px;
+
+}
+.content header p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.content header i{
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+}
+.content form{
+    margin: 15px 25px 35px;
+}
+.content form .row{
+    margin-bottom: 20px;
+}
+form .row label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.content form :where(input, textarea){
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #999;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 17px;
+
+}
+.content form textarea{
+    height: 150px;
+    resize: none;
+    padding: 8px 15px;
+}
+.content form button{
+    width: 100%;
+    height: 50px;
+    background-color: #6a93f8;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 4px;
+    cursor: pointer;
+}
